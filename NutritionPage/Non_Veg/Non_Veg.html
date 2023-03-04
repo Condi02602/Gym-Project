@@ -56,14 +56,59 @@
 		<li>Serve hot with rice or naan bread, and garnish with fresh cilantro if desired.</li>
             </div>
         </div>
-        <div class="nutritional-value">
-            <h2>Nutritional Value</h2>
+        <div class="nutritional-container">
+            <h2 class="nutritional-title">
+                Nutritional Info.
+            </h2>
+            <div class="calorie-count">300 - Calories</div>
+            <div class="nutritional-info">
+                <div class="nutrients-bar">
+                    <div class="Protein-bar bar"></div>
+                    <div class="Fats-bar bar"></div>
+                    <div class="Carbs-bar bar"></div>
+                    <div class="Fibre-bar bar">
+                    </div>
+                </div>
+                <div class="macro-nutrients">
+        
+                </div>
+            </div>
+            <script>
+                let nutritionalObject = {
+                    Protein: {
+                        color: "#45cfffe8",
+                        quantity: 50
+                    },
+                    Carbs: {
+                        color: "#ff71af",
+                        quantity: 20
+                    },
+                    Fats: {
+                        color: "orange",
+                        quantity: 30
+                    },
+                    Fibre: {
+                        color: "#9d16c3db",
+                        quantity: 10
+                    },
+                }
+        
+                for (let nutrient in nutritionalObject) {
+                    let bar = document.querySelector(`.${nutrient}-bar`);
+                    console.log(nutritionalObject[nutrient])
+                    bar.style.backgroundColor = nutritionalObject[nutrient].color;
+                    bar.style.width = `${nutritionalObject[nutrient].quantity}%`;
+                    console.log(nutrient.color);
+                    document.querySelector(".macro-nutrients").innerHTML += `<li class="nutrient"><div class="disc" style=background-color:${nutritionalObject[nutrient].color}></div>${nutrient} <div class="calorie-count">  ${nutritionalObject[nutrient].quantity}g</div></li>`;
+                }
+            </script>
+        
         </div>
-
         <div class="Page-video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/iruoNB0uu2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
+      
        
     </div>
 
@@ -79,6 +124,18 @@
             <div id="logo" class="logo">
                 FitGeek
             </div>
+            <div class="about-us">
+                <h2 class="about-us-title">About us</h2>
+                <p class="about-us-para"><strong>My name is BabaTunde</strong> We here at athleanx.com are committed to providing you our visitor/user with a safe and reliable website experience.  That said, as with all fitness programs, the best results are not uncommonly correlated with the best efforts, discipline, diligence, and so on, and therefore the results depicted and featured cannot be construed as common, typical, expected, normal, or associated with the average users experience. Results, as always, will vary from individual to individual for these reasons and you are responsible for understanding that atypical outcomes may not reflect your experience.</p>
+               </div>
+               <div class="about-us">
+                <h2 class="about-us-title">Contact us</h2>
+                <p class="about-us-para"><strong>Contact Info</strong></p>
+                <p>022-25436611 +91-934284532</p>
+
+                    <p>fitgeek@gmail.com </p>
+               </div>
+
             <div class="socials">
                 <!--instagram-->
                 <a href="https://instagram.com/swapnilkota20">
