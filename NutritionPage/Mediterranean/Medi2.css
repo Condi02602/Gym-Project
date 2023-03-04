@@ -154,8 +154,13 @@ header>* {
     padding: 0.7rem;
 }
 
+iframe{
+    width: 50%;
+    height: 25rem;
+}
+
 footer {
-    height: 12rem;
+    min-height: max-content;
     flex-direction: column;
     background-color: var(--dark--theme--color);
     padding: 0 2.5rem;
@@ -221,4 +226,58 @@ footer {
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: space-between;
+}
+.nutrients-bar {
+    display: flex;
+    flex-direction: row;
+    height: 0.6rem;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.nutritional-title,
+.calorie-count,
+.nutrients-bar {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.calorie-count {
+    font-weight: 600;
+}
+
+.macro-nutrients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bar {
+    height: 100%;
+    overflow: hidden;
+}
+
+.nutrient {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-right: 2rem;
+    margin-bottom: 0rem;
+}
+
+.disc {
+    height: 0.6rem;
+    width: 0.6rem;
+    border-radius: 50%;
+    margin: 0;
+}
+.nutritional-container{
+    width: 50%;
+    margin: 1.3rem;
+}
+.about-us{
+    width: 25%;
+    color: #fff;
 }

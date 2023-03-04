@@ -64,8 +64,52 @@
 		<li>Serve hot with rice or naan bread, and garnish with fresh cilantro if desired.</li>
             </div>
         </div>
-        <div class="nutritional-value">
-            <h2>Nutritional Value</h2>
+        <div class="nutritional-container">
+            <h2 class="nutritional-title">
+                Nutritional Info.
+            </h2>
+            <div class="calorie-count">500 - Calories</div>
+            <div class="nutritional-info">
+                <div class="nutrients-bar">
+                    <div class="Protein-bar bar"></div>
+                    <div class="Fats-bar bar"></div>
+                    <div class="Carbs-bar bar"></div>
+                    <div class="Fibre-bar bar">
+                    </div>
+                </div>
+                <div class="macro-nutrients">
+        
+                </div>
+            </div>
+            <script>
+                let nutritionalObject = {
+                    Protein: {
+                        color: "#45cfffe8",
+                        quantity: 45
+                    },
+                    Carbs: {
+                        color: "#ff71af",
+                        quantity: 30
+                    },
+                    Fats: {
+                        color: "orange",
+                        quantity: 40
+                    },
+                    Fibre: {
+                        color: "#9d16c3db",
+                        quantity: 20
+                    },
+                }
+        
+                for (let nutrient in nutritionalObject) {
+                    let bar = document.querySelector(`.${nutrient}-bar`);
+                    console.log(nutritionalObject[nutrient])
+                    bar.style.backgroundColor = nutritionalObject[nutrient].color;
+                    bar.style.width = `${nutritionalObject[nutrient].quantity}%`;
+                    console.log(nutrient.color);
+                    document.querySelector(".macro-nutrients").innerHTML += `<li class="nutrient"><div class="disc" style=background-color:${nutritionalObject[nutrient].color}></div>${nutrient} <div class="calorie-count">  ${nutritionalObject[nutrient].quantity}g</div></li>`;
+                }
+            </script>
         </div>
 
         <div class="Page-video">
@@ -87,9 +131,20 @@
             <div id="logo" class="logo">
                 FitGeek
             </div>
+            <div class="about-us">
+                <h2 class="about-us-title">About us</h2>
+                <p class="about-us-para"><strong>Our Belief</strong> We here at FitGeek.com are committed to providing you our visitor/user with a safe and reliable website experience.  That said, as with all fitness programs, the best results are not uncommonly correlated with the best efforts, discipline, diligence, and so on, and therefore the results depicted and featured cannot be construed as common, typical, expected, normal, or associated with the average users experience. Results, as always, will vary from individual to individual for these reasons and you are responsible for understanding that atypical outcomes may not reflect your experience.</p>
+               </div>
+               <div class="about-us">
+                <h2 class="about-us-title">Contact us</h2>
+                <p class="about-us-para"><strong>Contact Info</strong></p>
+                <p>022-25436611 +91-934284532</p>
+
+                    <p>fitgeek@gmail.com </p>
+               </div>
             <div class="socials">
                 <!--instagram-->
-                <a href="https://instagram.com/swapnilkota20">
+                <a href="https://www.instagram.com/fitgeekgyms/?next=%2F">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram"
                         width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -100,7 +155,7 @@
                     </svg>
                 </a>
                 <!--linkedIn-->
-                <a href="https://in.linkedin.com/in/swapnil-kota-7334b6214">
+                <a href="https://www.linkedin.com/in/conrad-aruldas-bb3559211/">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
                         width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -113,7 +168,7 @@
                     </svg>
                 </a>
                 <!--github-->
-                <a href="https://github.com/swapnilkota108">
+                <a href="https://github.com/Condi02602">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44"
                         height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
